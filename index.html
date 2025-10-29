@@ -40,6 +40,7 @@
             color: white;
             padding: 2rem;
             text-align: center;
+            position: relative;
         }
 
         .header h1 {
@@ -53,6 +54,29 @@
             font-size: 1rem;
             opacity: 0.95;
             font-weight: 300;
+        }
+
+        .compiler-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .compiler-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
         }
 
         .chat-container {
@@ -269,6 +293,14 @@
                 font-size: 0.9rem;
             }
 
+            .compiler-btn {
+                position: static;
+                margin-top: 0.5rem;
+                display: inline-block;
+                font-size: 0.75rem;
+                padding: 0.3rem 0.6rem;
+            }
+
             .chat-container {
                 padding: 1rem;
             }
@@ -303,6 +335,12 @@
                 font-size: 0.85rem;
             }
 
+            .compiler-btn {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.5rem;
+                margin-top: 0.3rem;
+            }
+
             .message-content {
                 max-width: 90%;
                 padding: 0.65rem 0.9rem;
@@ -318,11 +356,13 @@
                 font-size: 0.85rem;
             }
         }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <a href="compiler.html" class="compiler-btn"> पायथन संकलक</a>
             <h1>Ayesha - Your π-thon Teacher</h1>
             <p>Developed by Gokul Raj | Ask me anything about Python!</p>
         </div>
@@ -355,6 +395,7 @@
             <button id="sendBtn">Send</button>
         </div>
     </div>
+
 
     <script>
         const chatContainer = document.getElementById('chatContainer');
